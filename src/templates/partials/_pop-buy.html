@@ -1,0 +1,25 @@
+<div class="b-popup" id="pop-buy">
+  <div class="b-popup-content popup-buy">
+    <div class="b-popup-close">
+      <svg class="icon-close">
+        <use xlink:href="#close"></use>
+      </svg>
+    </div>
+    <h3>{{t.bTitle | safe }}</h3>
+    <form>
+      <label for="bname">{{t.bName | safe }}</label>
+      <input type="text" id="name" name="bname" required />
+
+      <label for="bemail">{{t.bEmail | safe }}</label>
+      <input type="email" id="email" name="bemail" required />
+
+      <label for="bphone">{{t.bPhone | safe }}</label>
+      <input type="tel" id="bphone" name="bphone" required />
+
+      <label for="btitle">{{t.bProduct | safe }}</label>
+      <input id="btitle" name="btitle" value="ESET Smart Security Premium" />
+
+      <input type="submit" value="1152 грн – {{t.bPay | safe }}" />
+    </form>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="container">
+  <input type="radio" id="tab1" name="tab" checked />
+  <label for="tab1">
+    <svg class="">
+      <use xlink:href="#windows"></use>
+    </svg>
+    Windows
+  </label>
+  <input type="radio" id="tab2" name="tab" />
+  <label for="tab2">
+    <svg class=""><use xlink:href="#android"></use></svg>
+    Android
+  </label>
+  <input type="radio" id="tab3" name="tab" />
+  <label for="tab3">
+    <svg class="">
+      <use xlink:href="#mac-os"></use>
+    </svg>
+    MacOS
+  </label>
+  <input type="radio" id="tab4" name="tab" />
+  <label for="tab4">
+    <svg class="">
+      <use xlink:href="#linux"></use>
+    </svg>
+    Linux
+  </label>
+  <div class="line"></div>
+
+  <div class="content-container">
+    <div class="content" id="c1">
+      <div class="cards">
+        {% include "../partials/_card-" + ver + ".html" %}
+        {% include "../partials/_card-" + ver + ".html" %}
+        {% include "../partials/_card-" + ver + ".html" %}
+      </div>
+    </div>
+
+    <div class="content" id="c2">
+      <div class="cards">
+        {% include "../partials/_card-" + ver + ".html" %}
+        {% include "../partials/_card-" + ver + ".html" %}
+      </div>
+    </div>
+
+    <div class="content" id="c3">
+      <div class="cards">
+        {% include "../partials/_card-" + ver + ".html" %}
+        {% include "../partials/_card-" + ver + ".html" %}
+      </div>
+    </div>
+
+    <div class="content" id="c4">
+      <div class="cards">
+        {% include "../partials/_card-" + ver + ".html" %}
+      </div>
+    </div>
+  </div>
+</div>

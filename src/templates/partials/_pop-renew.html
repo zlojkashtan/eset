@@ -1,0 +1,46 @@
+<div class="b-popup" id="pop-renew">
+  <div class="b-popup-content popup-renew">
+    <div class="b-popup-close">
+      <svg class="icon-close">
+        <use xlink:href="#close"></use>
+      </svg>
+    </div>
+
+    {{t.rTitle | safe }}
+
+    <div class="acc" id="acc">
+      <div class="acc__title">{{t.rKey | safe }}</div>
+      <div class="acc__content">
+        <form>
+          <label for="rkey">{{t.rKey2 | safe }}</label>
+          <input type="text" id="rkey" name="rkey" />
+          <input type="submit" value="{{t.rContinue | safe }}" />
+        </form>
+      </div>
+      <div class="acc__title">{{t.rEmail | safe }}</div>
+      <div class="acc__content">
+        <form>
+          <label for="remail">{{t.rEmail2 | safe }}</label>
+          <input type="email" id="remail" name="remail" />
+          <input type="submit" value="{{t.rContinue | safe }}" />
+        </form>
+      </div>
+      <div class="acc__title">{{t.rPhone | safe }}</div>
+      <div class="acc__content">
+        <form>
+          <label for="rphone">{{t.rPhone2 | safe }}</label>
+          <input type="tel" id="rphone" name="rphone" />
+          <input type="submit" value="{{t.rContinue | safe }}" />
+        </form>
+      </div>
+      <div class="acc__title">{{t.rName | safe }}</div>
+      <div class="acc__content">
+        <form>
+          <label for="rname">{{t.rName2 | safe }}</label>
+          <input type="text" id="rname" name="rname" />
+          <input type="submit" value="{{t.rContinue | safe }}" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

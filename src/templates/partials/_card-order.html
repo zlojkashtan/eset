@@ -1,0 +1,68 @@
+<div class="card">
+  <div class="card__img">
+    <img src="images/card.png" />
+  </div>
+  <div class="card__title">title</div>
+  <div class="card__description">
+    <p>description 1</p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dicta
+      minus illo expedita!
+    </p>
+  </div>
+
+  <div class="card__orderform">
+    <div class="card__numbers">
+      <div class="number-input">
+        <button
+          onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+        ></button>
+        <input
+          class="quantity"
+          min="1"
+          max="3"
+          name="quantity-d"
+          value="1"
+          type="number"
+        />
+        <button
+          onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+          class="plus"
+        ></button>
+        <legend for="quantity-d">{{t.cardD | safe }}</legend>
+      </div>
+      <div class="number-input">
+        <button
+          onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+        ></button>
+        <input
+          class="quantity"
+          min="1"
+          max="5"
+          name="quantity-p"
+          value="1"
+          type="number"
+        />
+        <button
+          onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+          class="plus"
+        ></button>
+        <legend for="qantity-p">{{t.cardY | safe }}</legend>
+      </div>
+    </div>
+
+    <div class="card__price">1152 <sub>грн</sub></div>
+    <a href="#" class="btn btn-green btn-order">{{t.order | safe }}</a>
+  </div>
+  <div class="card__second-btn">
+    <a href="#" class="btn-renew">{{t.renew | safe }}</a>
+  </div>
+  <ul class="card__adv">
+    <li>adv1</li>
+    <li>adv2</li>
+    <li>adv3</li>
+    <li>adv4</li>
+    <li class="is-inactive">adv5</li>
+    <li class="is-inactive">adv6</li>
+  </ul>
+</div>

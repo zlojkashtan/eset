@@ -1,0 +1,12 @@
+ProjectTitle: ESET
+Github: https://github.com/zlojkashtan/eset
+
+PageList:
+  - file: order-ua.html
+    ready: 100
+  - file: order-ru.html
+    ready: 100
+  - file: renew-ua.html
+    ready: 100
+  - file: renew-ru.html
+    ready: 100

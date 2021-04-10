@@ -1,0 +1,99 @@
+<header id="header">
+  <div class="wrapper header">
+    <div class="header__left b-left">
+      <div class="b-left__burger" id="burger-btn">
+        <svg class="icon-burger">
+          <use xlink:href="#burger"></use>
+        </svg>
+      </div>
+      <div class="b-left__close" id="close-btn">
+        <svg class="icon-close">
+          <use xlink:href="#close"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="header__center b-center">
+      <div class="b-center__logo">
+        <svg>
+          <use xlink:href="#logo"></use>
+        </svg>
+      </div>
+      <div class="b-center__lang">
+        {% if lang=="ua" %}
+          <div class="lang-button">УКР</div>
+          <a href="{{ver}}-ru.html" class="lang-button lang-button--inactive">РУС</a>
+        {% else %}
+          <a href="{{ver}}-ua.html" class="lang-button lang-button--inactive">УКР</a>
+          <div class="lang-button">РУС</div>
+        {% endif %}
+      </div>
+      <div class="b-center__phone">
+        <div>+38 <sup>044 339 57 20</sup></div>
+        <div>{{t.days | safe }}, 9:00 - 18:00</div>
+      </div>
+    </div>
+    <div class="header__right b-right">
+      <div class="b-right__phoneicon">
+        <svg class="icon-mobile">
+          <use xlink:href="#mobile"></use>
+        </svg>
+      </div>
+      {% if ver=="order" %}
+        <div class="b-right__subbutton">
+          <a href="#" class="btn-renew">{{t.renew | safe }}</a>
+        </div>
+        <div class="b-right__button">
+          <a href="#" class="scroll2cards">{{t.choose | safe }}</a>
+        </div>
+      {% else %}
+        <div class="b-right__subbutton">
+          <a href="#" class="scroll2cards">{{t.choose | safe }}</a>
+        </div>
+        <div class="b-right__button">
+          <a href="#" class="btn-renew">{{t.renew | safe }}</a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu">
+  {% if ver=="order" %}
+    <a href="#" class="btn btn-green scroll2cards">{{t.choose | safe }}</a>
+    <a href="#" class="btn btn-opacity btn-renew">{{t.renew | safe }}</a>
+  {% else %}
+    <a href="#" class="btn btn-green btn-renew">{{t.renew | safe }}</a>
+    <a href="#" class="btn btn-opacity scroll2cards">{{t.choose | safe }}</a>
+  {% endif %}
+
+  <div class="menu__lang">
+    {% if lang=="ua" %}
+      <div class="lang-button">УКР</div>
+      <a href="{{ver}}-ru.html" class="lang-button lang-button--inactive">РУС</a>
+    {% else %}
+      <a href="{{ver}}-ua.html" class="lang-button lang-button--inactive">УКР</a>
+      <div class="lang-button">РУС</div>
+    {% endif %}
+  </div>
+
+  <div class="menu__contacts">
+    <div>
+      <span class="menu__phone">+38 <sup>044 339 57 20</sup></span>
+      <span>{{t.days | safe }}, 9:00 - 18:00</span>
+    </div>
+
+    <div>
+      <svg class="icon-mail">
+        <use xlink:href="#email"></use>
+      </svg>
+      <a class="menu__email" href="mailto:sales@it-mod.com.ua"
+        >sales@it-mod.com.ua <br
+      /></a>
+    </div>
+
+    <svg class="icon-point">
+      <use xlink:href="#point"></use>
+    </svg>
+    <span>{{t.address | safe }}</span>
+  </div>
+</div>

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>renew-ua</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="css/app.css" />
+  </head>
+  <body>
+    <!-- BEGIN content -->
+    <svg width="0" height="0" class="hidden">
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 46" id="arrow-white">
+        <title>fast-forward-double-right-arrows</title>
+        <g fill="#FFF">
+          <path d="M34.744 18.947L20.532 33.159 6.319 18.947.69 24.575l19.842 19.842 19.84-19.842z"></path>
+          <path d="M.69 6.129l19.842 19.84 19.84-19.84L34.745.5 20.532 14.712 6.319.5z"></path>
+        </g>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" id="arrow-blue">
+        <title>fast-forward-double-right-arrows copy</title>
+        <g fill="#0296A1">
+          <path d="M5.756 25.553l14.212-14.212 14.213 14.212 5.629-5.628L19.968.083.128 19.925z"></path>
+          <path d="M39.81 38.371l-19.842-19.84L.128 38.37 5.755 44l14.212-14.212L34.181 44z"></path>
+        </g>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 13" id="burger">
+        <title>burger_mobile</title>
+        <path d="M20 2.184V0H0v2.184h20zm0 5.382V5.434H0v2.132h20zM20 13v-2.184H0V13h20z" fill="#FFF"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="close">
+        <title>close</title>
+        <path d="M24 21.017L14.983 12 24 2.983 21.017 0 12 9.017 2.983 0 0 2.983 9.017 12 0 21.017 2.983 24 12 14.983 21.017 24z" fill="#EEE"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14" id="email">
+        <title>email</title>
+        <path d="M15.68 13.68c.453 0 .84-.167 1.16-.5.32-.333.48-.727.48-1.18V2c0-.453-.16-.847-.48-1.18a1.55 1.55 0 00-1.16-.5H2.32c-.453 0-.84.167-1.16.5C.84 1.153.68 1.547.68 2v10c0 .453.16.847.48 1.18.32.333.707.5 1.16.5h13.36zM9 7.82L2.32 3.68V2L9 6.18 15.68 2v1.68L9 7.82z" fill="#FFF"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 21" id="check">
+        <title>check</title>
+        <path d="M26 3.348L22.728 0 8.748 14.336l-5.52-5.648L0 12.048 8.75 21z" fill="#8CC63F"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 807.9 241.4" id="logo">
+        <path d="M473.1 145.5c1.5-6.4 3.1-12.7 4.6-19.1 9.4-39.8 18.7-79.6 28-119.4.7-2.8 1.8-4.1 5-4 13 .2 26 .2 39 0 3.2 0 4 1 4 4.1-.1 74.4-.1 148.7 0 223.1 0 3.1-.9 4.2-4 4.1-8-.2-16-.2-24 0-3.5.1-4.4-1.1-4.4-4.5.1-51 .1-102 .1-153V72c-.3-.1-.6-.1-.9-.2-.4.9-.9 1.8-1.2 2.8-12.1 51.4-24.2 102.9-36.1 154.3-.9 4-2.5 5.8-6.7 5.3-3-.4-6-.2-9 0-2.8.1-4.1-.7-4.8-3.7-12.1-51.7-24.3-103.4-36.5-155-.3-1.3-.7-2.5-1.1-3.7-.4 0-.7.1-1.1.1v157.2c0 5.1 0 5.1-5.2 5.1-7.7 0-15.5-.1-23.2 0-2.8 0-4-.7-4-3.8.1-74.6.1-149.2 0-223.9 0-2.8 1-3.6 3.7-3.6 13 .1 26 .2 39 0 3.6-.1 4.7 1.3 5.4 4.5 4.9 21.6 10 43.2 15 64.8 5.4 23.3 10.9 46.6 16.4 69.9.3 1.1.7 2.2 1.1 3.4h.9zM678.2 119c0 27.2.2 54.5-.1 81.7-.1 14.2-6.7 24.9-19.8 30.9-3.5 1.6-7.7 2.5-11.6 2.6-11.4.3-22.7.2-34.1.1-16.8-.2-31.2-14.2-31.3-31.1-.2-45.4-.1-90.7-.1-136.1 0-11-.1-22 .1-33 .3-14.3 12.5-28.9 26.7-30 14.4-1.1 28.9-1 43.3 0 12.7.9 24.4 13.8 26.1 26.5.5 3.3.7 6.7.7 10 .1 26.2.1 52.3.1 78.4zm-32.4 0c0-26.4-.1-52.7.1-79.1 0-3.5-1.1-4.6-4.5-4.5-8 .2-16 .2-24 0-3.3-.1-4.3 1.1-4.3 4.3.1 52.9.1 105.7 0 158.6 0 3.1 1.1 4.2 4.2 4.2 7.9-.1 15.7 0 23.6 0 4.9 0 5-.1 5-5.1-.1-26.2-.1-52.3-.1-78.4zm153.1-.3v110.6c0 5 0 5-4.9 5-19.6 0-39.2-.4-58.9.1-16.4.4-33.2-13.5-33.2-33.4.1-25.9 0-51.7 0-77.6 0-15.4 8.2-25.8 23.4-28.7 5.6-1.1 11.4-.9 17.1-1 6.4-.2 12.8-.2 19.1 0 3.7.1 4.9-.9 4.9-4.8-.2-27-.1-54-.1-81 0-4.9 0-4.9 5-4.9 7.7 0 15.5.2 23.2-.1 3.4-.1 4.2 1.1 4.2 4.3.2 37.3.2 74.4.2 111.5zm-32.3 0c-9.9 0-19.2.1-28.4-.1-3-.1-3.8.9-3.8 3.8.1 25.4.1 50.7 0 76.1 0 3.2 1.2 4.1 4.2 4 7.7-.1 15.5-.2 23.2 0 3.6.1 5-.9 4.9-4.8-.2-24.8-.1-49.7-.1-74.6v-4.4zm-525-74.2h-76.2V234h-37.3V50c0-6 0-6-6.2-6-9.2 0-18.5 0-27.7-.1-1.4 0-3.2-.3-4.1-1.1-11.7-11.4-23.2-23-35.7-35.4h187.2v37.1zM41.5 233.4H5.4V9.7c.8.6 1.6 1.2 2.2 1.8 10.6 10.6 21.3 21.2 31.7 31.9 1.2 1.3 2.2 3.4 2.2 5.1.1 60.5.1 121 .1 181.5.1 1 0 2-.1 3.4zm319.4-130.5v36.6H229.6v-36.6h131.3z"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="mobile">
+        <title>phone_mobile</title>
+        <path d="M18.907 20c.302 0 .56-.107.773-.32.213-.213.32-.471.32-.773v-3.92c0-.303-.107-.56-.32-.774a1.054 1.054 0 00-.773-.32c-1.458 0-2.774-.204-3.947-.613a.909.909 0 00-.613-.053c-.214.053-.391.16-.534.32L11.36 16a17.3 17.3 0 01-4.24-3.12A17.3 17.3 0 014 8.64l2.453-2.453a.889.889 0 00.294-.534 1.419 1.419 0 00-.027-.613c-.409-1.173-.613-2.489-.613-3.947 0-.302-.107-.56-.32-.773A1.054 1.054 0 005.013 0h-3.92C.791 0 .533.107.32.32.107.533 0 .791 0 1.093c0 2.56.498 5.014 1.493 7.36a18.832 18.832 0 004.054 6 18.832 18.832 0 006 4.054c2.346.995 4.8 1.493 7.36 1.493z" fill="#FFF"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 18" id="point">
+        <title>point_location</title>
+        <path d="M6 17.32l.6-.7c.507-.6.987-1.213 1.44-1.84a38.257 38.257 0 001.74-2.58c.613-1.04 1.093-2.007 1.44-2.9.4-1.053.6-1.987.6-2.8a5.74 5.74 0 00-.78-2.94 5.87 5.87 0 00-2.1-2.1A5.74 5.74 0 006 .68a5.74 5.74 0 00-2.94.78 5.87 5.87 0 00-2.1 2.1A5.74 5.74 0 00.18 6.5c0 .813.2 1.747.6 2.8.347.893.827 1.86 1.44 2.9a38.257 38.257 0 001.74 2.58c.453.627.933 1.24 1.44 1.84l.6.7zm0-8.76c-.573 0-1.06-.2-1.46-.6-.4-.4-.6-.887-.6-1.46a2.11 2.11 0 011.03-1.8c.313-.187.657-.28 1.03-.28s.72.093 1.04.28a2.083 2.083 0 011.04 1.8c0 .373-.093.717-.28 1.03A2.11 2.11 0 016 8.56z" fill="#FFF"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 45" id="windows">
+        <title>windows</title>
+        <path d="M21 21V3.375L0 6v15zm3 0h24V0L24 3zm0 3v18l24 3V24zm-3 0H0v15l21 2.625z"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 48" id="android">
+        <title>android-logo</title>
+        <path d="M3.013 15.521a2.86 2.86 0 00-2.102.864 2.827 2.827 0 00-.864 2.073v12.383c0 .826.288 1.526.864 2.102a2.86 2.86 0 002.102.864c.825 0 1.521-.288 2.088-.864.566-.576.85-1.276.85-2.102V18.458c0-.806-.288-1.497-.864-2.073a2.829 2.829 0 00-2.074-.864zM26.857 4.406L28.9.634c.135-.25.087-.441-.143-.576-.25-.116-.442-.057-.576.172l-2.073 3.802a14.157 14.157 0 00-5.789-1.21c-2.035 0-3.964.404-5.788 1.21L12.46.23c-.135-.23-.327-.288-.576-.172-.23.135-.278.326-.144.576l2.045 3.772c-2.073 1.057-3.724 2.53-4.953 4.42a11.165 11.165 0 00-1.843 6.206h26.636c0-2.246-.615-4.313-1.843-6.206-1.229-1.89-2.87-3.363-4.924-4.42zM15.036 9.892a1.08 1.08 0 01-.792.331 1.03 1.03 0 01-.778-.331 1.104 1.104 0 01-.316-.792c0-.307.105-.57.316-.792.211-.22.47-.33.778-.33.307 0 .57.11.792.33.22.222.331.485.331.792 0 .307-.111.571-.331.792zm12.137 0c-.211.221-.47.331-.777.331-.308 0-.572-.11-.792-.331a1.078 1.078 0 01-.332-.792c0-.307.11-.57.332-.792.22-.22.484-.33.792-.33.307 0 .566.11.777.33.212.222.317.485.317.792 0 .307-.106.571-.317.792zM7.102 35.247c0 .883.307 1.632.921 2.246.615.614 1.363.92 2.246.92H12.4l.03 6.538c0 .826.287 1.527.863 2.103a2.828 2.828 0 002.074.864c.825 0 1.526-.288 2.102-.864a2.862 2.862 0 00.863-2.103v-6.537h3.974v6.537c0 .826.288 1.527.864 2.103a2.86 2.86 0 002.102.864c.825 0 1.526-.288 2.102-.864.576-.576.864-1.277.864-2.103v-6.537h2.16c.863 0 1.602-.307 2.217-.92.614-.615.921-1.363.921-2.247v-19.18H7.102v19.18zm30.525-19.726c-.807 0-1.498.284-2.074.85-.575.567-.863 1.263-.863 2.087v12.383c0 .826.287 1.526.863 2.102a2.828 2.828 0 002.074.864c.825 0 1.526-.288 2.102-.864.576-.576.863-1.276.863-2.102V18.458c0-.824-.287-1.52-.863-2.087-.576-.566-1.277-.85-2.102-.85z"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 48" id="linux">
+        <title>linux</title>
+        <path d="M39.763 38.54c-1.408-.577-2.01-1.342-1.952-2.483.06-1.333-.696-2.308-1.055-2.694.217-.828.851-3.694.001-6.184-.913-2.664-3.702-6.733-6.58-10.733-1.178-1.643-1.233-3.429-1.298-5.496-.061-1.972-.13-4.208-1.23-6.693C26.452 1.552 24.052 0 21.064 0c-1.777 0-3.602.556-5.006 1.524-2.876 1.984-2.495 6.31-2.244 9.174.034.392.067.762.086 1.078.167 2.804.015 4.282-.184 4.731-.13.293-.764 1.129-1.435 2.013-.695.915-1.482 1.952-2.128 2.918-.77 1.162-1.391 2.94-1.992 4.658-.44 1.257-.856 2.445-1.26 3.155a4.296 4.296 0 00-.417 3.227c-.29.201-.71.598-1.063 1.346-.428.913-1.296 1.404-3.1 1.75-.83.17-1.402.52-1.701 1.037-.435.754-.198 1.702.018 2.35.32.95.12 1.553-.241 2.647a34.19 34.19 0 00-.274.854c-.151.497-.097.95.161 1.344.682 1.042 2.67 1.41 4.718 1.651 1.223.145 2.56.634 3.855 1.107 1.268.464 2.579.943 3.77 1.088.182.023.361.035.534.035 1.8 0 2.613-1.195 2.87-1.685.647-.132 2.876-.554 5.174-.611 2.294-.065 4.513.387 5.142.528.197.379.718 1.243 1.55 1.688.456.25 1.091.393 1.742.393.695 0 2.017-.165 3.063-1.265 1.044-1.107 3.652-2.519 5.556-3.55.425-.23.823-.445 1.171-.64 1.07-.592 1.654-1.44 1.602-2.324-.044-.734-.53-1.379-1.27-1.681zm-23.68-.213c-.134-.938-1.34-1.868-2.738-2.945-1.142-.881-2.438-1.88-2.794-2.725-.738-1.744-.156-4.81.857-6.39.5-.79.91-1.99 1.305-3.15.428-1.251.87-2.546 1.363-3.112.783-.885 1.506-2.607 1.634-3.964.732.7 1.869 1.587 2.919 1.587.161 0 .318-.02.468-.063.718-.208 1.775-.818 2.797-1.408.88-.51 1.967-1.137 2.375-1.194.701 1.006 4.773 10.018 5.19 12.912.329 2.29-.02 4.183-.194 4.924a3.622 3.622 0 00-.485-.035c-1.134 0-1.434.62-1.513.99-.2.96-.222 4.03-.224 4.72-.41.522-2.484 2.976-5.462 3.417a23.648 23.648 0 01-3.366.266c-.873 0-1.43-.068-1.66-.103l-1.497-1.712c.59-.291 1.18-.906 1.024-2.015zm1.898-28.231c-.047.02-.093.041-.138.064a2.788 2.788 0 00-.031-.307c-.164-.94-.787-1.623-1.483-1.623-.051 0-.103.004-.16.013-.413.069-.738.38-.916.82.156-.967.704-1.683 1.354-1.683.763 0 1.408 1.029 1.408 2.246 0 .154-.011.307-.034.47zm5.93.725c.07-.223.109-.464.109-.714 0-1.103-.7-1.968-1.595-1.968-.874 0-1.585.883-1.585 1.968 0 .074.004.148.011.222a28.893 28.893 0 00-.135-.051 3.01 3.01 0 01-.152-.947c0-1.32.844-2.394 1.88-2.394 1.038 0 1.881 1.074 1.881 2.394 0 .55-.151 1.073-.413 1.49zm-.764 2.569c-.015.066-.047.096-.398.279-.178.092-.399.207-.675.376l-.185.112c-.742.45-2.48 1.504-2.953 1.566-.32.043-.519-.081-.965-.384a11.13 11.13 0 00-.321-.215c-.804-.527-1.321-1.108-1.38-1.335.263-.203.912-.71 1.245-1.01.675-.627 1.354-1.05 1.69-1.05.018 0 .034.002.05.005.396.07 1.37.459 2.082.743.328.131.613.244.812.316.63.216.958.493.998.597zm5.657 29.33c.356-1.602.765-3.782.699-5.067-.016-.292-.042-.61-.067-.917-.046-.574-.116-1.428-.044-1.681a.307.307 0 01.047-.017c.003.734.163 2.2 1.335 2.71.349.153.748.23 1.186.23 1.174 0 2.476-.576 3.01-1.11.314-.313.578-.698.763-1.002.04.118.065.273.052.473-.07 1.083.457 2.52 1.46 3.05l.145.077c.357.188 1.305.685 1.32.921 0 0-.008.028-.06.077-.238.217-1.074.644-1.882 1.057-1.434.732-3.06 1.562-3.789 2.33-1.028 1.081-2.19 1.808-2.892 1.808a.76.76 0 01-.23-.033c-.762-.238-1.39-1.337-1.053-2.906zM2.82 38.632c-.078-.363-.14-.65-.073-.929.047-.206 1.065-.427 1.5-.521.61-.133 1.243-.27 1.656-.52.56-.34.862-.964 1.129-1.515.193-.398.392-.81.63-.945a.134.134 0 01.073-.017c.445 0 1.378.935 1.916 1.773.137.21.39.633.682 1.123.874 1.463 2.072 3.468 2.697 4.14.564.603 1.476 1.764 1.252 2.76-.165.772-1.04 1.4-1.246 1.54a1.276 1.276 0 01-.276.025c-1.197 0-3.567-.996-4.84-1.53l-.188-.08c-.711-.298-1.872-.486-2.994-.667-.893-.145-2.116-.343-2.318-.522-.165-.184.026-.783.194-1.312.121-.38.246-.772.314-1.184.098-.656-.017-1.19-.108-1.619z"></path>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 48" id="mac-os">
+        <title>mac-os-logo</title>
+        <path d="M33.147 25.142c-.061-5.997 4.89-8.867 5.109-9.01-2.78-4.063-7.107-4.622-8.654-4.684-3.679-.377-7.186 2.167-9.058 2.167-1.865 0-4.752-2.116-7.807-2.06-4.018.061-7.718 2.338-9.788 5.93-4.173 7.242-1.07 17.966 2.996 23.846 1.989 2.874 4.361 6.1 7.471 5.987 2.997-.12 4.128-1.94 7.752-1.94 3.624 0 4.642 1.94 7.81 1.881 3.227-.061 5.267-2.931 7.238-5.811 2.283-3.336 3.223-6.57 3.281-6.73-.075-.041-6.284-2.417-6.35-9.576zM27.189 7.557c1.649-2 2.766-4.783 2.461-7.557-2.383.096-5.26 1.58-6.97 3.583-1.533 1.772-2.866 4.601-2.51 7.32 2.654.209 5.37-1.351 7.019-3.346z"></path>
+      </symbol>
+    </svg>
+    <header id="header">
+      <div class="wrapper header">
+        <div class="header__left b-left">
+          <div class="b-left__burger" id="burger-btn">
+            <svg class="icon-burger">
+              <use xlink:href="#burger"></use>
+            </svg>
+          </div>
+          <div class="b-left__close" id="close-btn">
+            <svg class="icon-close">
+              <use xlink:href="#close"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="header__center b-center">
+          <div class="b-center__logo">
+            <svg>
+              <use xlink:href="#logo"></use>
+            </svg>
+          </div>
+          <div class="b-center__lang">
+            <div class="lang-button">УКР</div>
+            <a href="renew-ru.html" class="lang-button lang-button--inactive">РУС</a>
+          </div>
+          <div class="b-center__phone">
+            <div>+38 <sup>044 339 57 20</sup></div>
+            <div>пн.-нд., 9:00 - 18:00</div>
+          </div>
+        </div>
+        <div class="header__right b-right">
+          <div class="b-right__phoneicon">
+            <svg class="icon-mobile">
+              <use xlink:href="#mobile"></use>
+            </svg>
+          </div>
+          <div class="b-right__subbutton">
+            <a href="#" class="scroll2cards">Обрати антивірус</a>
+          </div>
+          <div class="b-right__button">
+            <a href="#" class="btn-renew">Поновити ліцензію</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu" id="menu">
+      <a href="#" class="btn btn-green btn-renew">Поновити ліцензію</a>
+      <a href="#" class="btn btn-opacity scroll2cards">Обрати антивірус</a>
+      <div class="menu__lang">
+        <div class="lang-button">УКР</div>
+        <a href="renew-ru.html" class="lang-button lang-button--inactive">РУС</a>
+      </div>
+      <div class="menu__contacts">
+        <div>
+          <span class="menu__phone">+38 <sup>044 339 57 20</sup></span>
+          <span>пн.-нд., 9:00 - 18:00</span>
+        </div>
+        <div>
+          <svg class="icon-mail">
+            <use xlink:href="#email"></use>
+          </svg>
+          <a class="menu__email" href="mailto:sales@it-mod.com.ua">sales@it-mod.com.ua <br /></a>
+        </div>
+        <svg class="icon-point">
+          <use xlink:href="#point"></use>
+        </svg>
+        <span>Україна, 03150, м. Київ,<br />вул. Казимира Малевича 86</span>
+      </div>
+    </div>
+    <div id="float-button" class="float-button">
+      <a href="#" class="btn btn-green btn-renew">Поновити ліцензію</a>
+    </div>
+    <section class="banner">
+      <div class="wrapper">
+        <div class="banner__content b-content">
+          <h1 class="b-content__main"> Поновлюй ліцензію та насолоджуйся безпекою від ESET. </h1>
+          <p class="b-content__sub"> Поновлюй ліцензію на 1 рік та отримуйзнижку 40%. </p>
+          <div class="b-content__buttons">
+            <a id="bbutton" href="#" class="btn btn-green btn-renew"> Поновити ліцензію</a>
+            <a href="#" class="btn btn-dashed scroll2cards"> Обрати антивірус</a>
+          </div>
+        </div>
+        <div class="steps">
+          <div>
+            <span class="steps__nmbr">1.</span>
+            <span> <b>Тисни</b> «Поновити ліцензію» </span>
+          </div>
+          <div>
+            <span class="steps__nmbr">2.</span>
+            <span> <b>Сплачуй</b> карткою </span>
+          </div>
+          <div>
+            <span class="steps__nmbr">3.</span>
+            <span> <b>Отримуй поновлення</b> протягом 15 хвилин </span>
+          </div>
+        </div>
+      </div>
+      <div class="arrow">
+        <svg class="arrow-white">
+          <use xlink:href="#arrow-white"></use>
+        </svg>
+      </div>
+    </section>
+    <section class="safely wrapper">
+      <h2>Безпечно відкривай світ онлайн</h2>
+      <p class="safely__sub">Збалансоване поєднання швидкості роботи, точності виявлення та зручності використання дозволить безтурботно проводити дозвілля онлайн. <b>Не зволікай – поновлюй свою ліцензію!</b></p>
+      <div class="safely__blocks">
+        <div>
+          <svg viewBox="0 0 92 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>speed</title>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Main_as_ESET_for_IT_MOD" transform="translate(-132.000000, -1404.000000)" fill-rule="nonzero">
+                <g id="speed" transform="translate(132.000000, 1404.000000)">
+                  <g id="stopwatch" fill="#E5E5E5">
+                    <rect id="Rectangle" x="49.4545455" y="0" width="18.9090909" height="8.72727273" rx="4.36363636"></rect>
+                    <path d="M24,32 L9.45454545,32 C8.24956058,32 7.27272736,32.9768333 7.27272736,34.1818182 C7.27272736,35.3868031 8.24956058,36.3636364 9.45454545,36.3636364 L24,36.3636364 C25.2049849,36.3636364 26.1818182,35.3868031 26.1818182,34.1818182 C26.1818182,32.9768333 25.2049849,32 24,32 L24,32 Z" id="Path"></path>
+                    <path d="M23.2727273,51.6363636 C23.2727273,50.4313787 22.295894,49.4545455 21.0909091,49.4545455 L6.54545455,49.4545455 C5.34046964,49.4545455 4.36363636,50.4313787 4.36363636,51.6363636 C4.36363636,52.8413485 5.34046964,53.8181818 6.54545455,53.8181818 L21.0909091,53.8181818 C22.295894,53.8181818 23.2727273,52.8413485 23.2727273,51.6363636 Z" id="Path"></path>
+                    <path d="M22.5454545,58.1818182 L12.3636364,58.1818182 C11.1586515,58.1818182 10.1818182,59.1586515 10.1818182,60.3636364 C10.1818182,61.5686213 11.1586515,62.5454545 12.3636364,62.5454545 L22.5454545,62.5454545 C23.7504395,62.5454545 24.7272727,61.5686213 24.7272727,60.3636364 C24.7272727,59.1586515 23.7504395,58.1818182 22.5454545,58.1818182 Z" id="Path"></path>
+                    <path d="M23.2727273,42.9090909 C23.2727273,41.704106 22.295894,40.7272727 21.0909091,40.7272727 L2.18181818,40.7272727 C0.976833273,40.7272727 -2.58379177e-15,41.704106 -2.58379177e-15,42.9090909 C-2.58379177e-15,44.1140758 0.976833273,45.0909091 2.18181818,45.0909091 L21.0909091,45.0909091 C22.295894,45.0909091 23.2727273,44.1140758 23.2727273,42.9090909 L23.2727273,42.9090909 Z" id="Path"></path>
+                    <path d="M82.8396364,24.9732727 L85.1790909,22.6336364 C85.7377608,22.0839926 85.9587137,21.2769373 85.7579272,20.5193721 C85.5571407,19.7618069 84.9654659,19.170132 84.2079006,18.9693455 C83.4503354,18.7685591 82.6432802,18.989512 82.0936364,19.5481818 L79.6587273,21.9829091 C74.9695686,18.1200545 69.2940531,15.6447506 63.2727273,14.8363636 L63.2727273,10.9090909 L54.5454545,10.9090909 L54.5454545,14.8363636 C48.5242418,15.6444352 42.8487372,18.1193565 38.1594545,21.9818182 L35.7245455,19.5470909 C35.1749017,18.9884211 34.3678464,18.7674681 33.6102812,18.9682546 C32.852716,19.1690411 32.2610411,19.760716 32.0602546,20.5182812 C31.8594681,21.2758464 32.0804211,22.0829017 32.6390909,22.6325455 L34.9785455,24.9721818 C29.3207867,31.018901 26.1757599,38.9918451 26.1818094,47.2727273 C26.1818094,65.3185455 40.8632727,80 58.9090909,80 C76.9549091,80 91.6363716,65.3185455 91.6363716,47.2727273 C91.6421448,38.9922218 88.4971373,31.0197169 82.8396364,24.9732727 Z M58.9090909,74.1818182 C44.0476104,74.1818182 32,62.1342078 32,47.2727273 C32,32.4112467 44.0476104,20.3636364 58.9090909,20.3636364 C73.7705714,20.3636364 85.8181818,32.4112467 85.8181818,47.2727273 C85.8181818,54.4094619 82.983125,61.2538945 77.9366916,66.3003279 C72.8902581,71.3467614 66.0458255,74.1818182 58.9090909,74.1818182 L58.9090909,74.1818182 Z" id="Shape"></path>
+                  </g>
+                  <path d="M58.5,47.5 L58.5,23 C44.9905919,23 34,33.9905919 34,47.5 C34,61.0094081 44.9905919,72 58.5,72 C72.0094081,72 83,61.0094081 83,47.5 L58.5,47.5 Z" id="Path" fill="#0296A1"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <span>Швидкість роботи</span>Мінімально впливає на швидкість роботи пристроїв. </div>
+        <div>
+          <svg viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>target</title>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Main_as_ESET_for_IT_MOD" transform="translate(-532.000000, -1404.000000)" fill-rule="nonzero">
+                <g id="target" transform="translate(532.000000, 1404.000000)">
+                  <g id="shooting" fill="#E5E5E5">
+                    <path d="M73.1632812,36.6667188 C71.5559375,20.9057813 59.0942187,8.4440625 43.3332812,6.83671875 L43.3332812,0 L36.6665625,0 L36.6665625,6.83671875 C20.9057813,8.4440625 8.4440625,20.9057813 6.83671875,36.6667188 L0,36.6667188 L0,43.3334375 L6.83671875,43.3334375 C8.4440625,59.094375 20.9057813,71.5560938 36.6667188,73.1634375 L36.6667188,80 L43.3334375,80 L43.3334375,73.1632812 C59.094375,71.5559375 71.5560938,59.0942187 73.1634375,43.3332812 L80,43.3332812 L80,36.6665625 L73.1632812,36.6665625 L73.1632812,36.6667188 Z M66.4367187,43.3332812 C64.8996875,55.3990625 55.3992187,64.8995312 43.3334375,66.4367187 L43.3334375,60 L36.6667187,60 L36.6667187,66.4367187 C24.6009375,64.8996875 15.1004687,55.3992187 13.5632812,43.3334375 L20,43.3334375 L20,36.6667187 L13.5632812,36.6667187 C15.1003125,24.6009375 24.6007812,15.1004687 36.6665625,13.5632812 L36.6665625,20 L43.3332812,20 L43.3332812,13.5632812 C55.3990625,15.1003125 64.8995312,24.6007812 66.4367187,36.6665625 L60,36.6665625 L60,43.3332812 L66.4367187,43.3332812 Z" id="Shape"></path>
+                  </g>
+                  <path d="M39.5,27 C32.044174,27 26,33.044174 26,40.5 C26,47.955826 32.044174,54 39.5,54 C46.955826,54 53,47.955826 53,40.5 C53,33.044174 46.955826,27 39.5,27 Z M39.5,43.8749604 C37.6360435,43.8749604 36.1250396,42.3639565 36.1250396,40.5 C36.1250396,38.6360435 37.6360435,37.1250396 39.5,37.1250396 C41.3639565,37.1250396 42.8749604,38.6360435 42.8749604,40.5 C42.8749604,42.3639565 41.3639565,43.8749604 39.5,43.8749604 Z" id="Shape" fill="#0296A1"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <span>Точність виявлення</span>Блокує та знешкоджує навіть складні види загроз. </div>
+        <div>
+          <svg viewBox="0 0 69 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>security</title>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Main_as_ESET_for_IT_MOD" transform="translate(-132.000000, -1668.000000)" fill-rule="nonzero">
+                <g id="security" transform="translate(132.000000, 1668.000000)">
+                  <g id="security-check" fill="#E5E5E5">
+                    <path d="M68.5714286,45.7140356 C68.5714286,51.7407023 63.1266667,59.094988 51.9261905,68.1945118 C47.9417658,71.4067593 43.8178565,74.4409986 39.5666231,77.2884909 C37.6595238,78.5711785 36.4290476,79.3430832 36.3047619,79.4207023 C35.7846283,79.7457867 35.2056106,79.9339934 34.6172953,79.9853225 L34.3963382,79.9981548 L34.3963382,79.9981548 L34.1750904,79.9981548 C33.5114925,79.9789064 32.851817,79.7864222 32.2666667,79.4207023 L32.2666667,79.4207023 C32.142381,79.3430832 30.9119048,78.5711785 29.0047619,77.2907023 C24.753572,74.4409986 20.6296628,71.4067593 16.6452381,68.1945118 C5.4447619,59.094988 0,51.7407023 0,45.7140356 L0,45.7140356 L0,11.4283213 C0,9.3243794 1.70558191,7.6187975 3.80952381,7.6187975 L3.80952381,7.6187975 C13.7246032,7.6187975 30.4951436,1.20036469 32.6438915,0.361581073 L32.707821,0.336538862 C32.8062056,0.297949383 32.8616931,0.275858585 32.8709524,0.272130832 C33.3250092,0.0907102772 33.8052427,-8.52026782e-14 34.2854762,-8.52581894e-14 L34.5259479,0.00755918976 C34.9255366,0.032756489 35.3220955,0.120947036 35.7004762,0.272130832 C35.7134392,0.277349687 35.8170095,0.318560107 36.0020464,0.390646286 L36.0862392,0.423318263 C38.794428,1.47345791 55.0600529,7.6187975 64.7619048,7.6187975 C66.8658467,7.6187975 68.5714286,9.3243794 68.5714286,11.4283213 L68.5714286,11.4283213 L68.5714286,45.7140356 Z M7.61937833,45.7538581 C7.64092358,47.0654488 8.75132548,51.9615319 21.45,62.2811785 C24.6613542,64.8905543 27.8610916,67.2325541 30.4646341,69.0541496 L30.4638095,69.052607 C31.6358236,69.8730537 32.6880906,70.5886147 33.5657025,71.1751568 C33.6931716,71.2604353 33.817109,71.3429868 33.9371937,71.4227447 C34.0571155,71.5023666 34.1734342,71.5794041 34.2857143,71.6535594 L34.5411916,71.4844625 L34.5411916,71.4844625 L34.7875226,71.320807 C34.9206889,71.2321405 35.0582695,71.1402497 35.2000572,71.0452244 C36.0371337,70.4839065 37.0209006,69.8133441 38.107619,69.052607 C38.1076247,69.0529405 38.1076304,69.053274 38.107636,69.0536075 C40.710337,67.2325541 43.9100744,64.8905543 47.1214286,62.2811785 C59.8201031,51.9615319 60.930505,47.0654488 60.9520502,45.7538581 L60.952381,15.0273689 C50.9971429,14.0068927 38.6271429,9.55308321 34.2828571,7.89594036 L34.285,7.896 L34.0647174,7.98109921 C29.5326231,9.70058983 17.4083651,14.0239007 7.61904762,15.0273689 Z" id="Combined-Shape"></path>
+                  </g>
+                  <path d="M57,46.6138575 C56.9295625,46.9637097 55.8739583,51.1053705 44.4985417,60.2742554 C40.9574167,63.1282956 37.4166911,65.6625469 34.7403895,67.4956611 L34.37,67.748 C34.2406051,67.8367939 34.1192292,67.9192331 34,68 L33.6292381,67.7480655 L33.6292381,67.7480655 L33.2596105,67.4956611 C30.5833089,65.6625469 27.0425833,63.1282956 23.5014583,60.2742554 C12.1260417,51.1053705 11.0704375,46.9637097 11,46.6138575 L11,46.6138575 L11,19.376722 C19.6388958,17.9787392 29.0497292,14.8086789 33.9937708,13 L33.9937708,13 L34,13.002 L34.0062292,13 C38.9502708,14.8086789 48.3611042,17.9787392 57,19.376722 L57,46.6138575 Z" id="Combined-Shape" fill="#0296A1"></path>
+                  <path d="M34.1305638,45.1278921 C32.9718105,46.2907026 31.0934714,46.2907026 29.9347181,45.1278921 L24,39.1705952 L28.1958457,34.9572969 L32.0326409,38.8086894 L41.8041543,29 L46,33.2132982 L34.1305638,45.1278921 Z" id="Path" fill="#FFFFFF"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <span>Зручність використання</span>Забезпечує якісний захист одразу після установки. </div>
+      </div>
+      <div class="arrow">
+        <svg>
+          <use xlink:href="#arrow-blue"></use>
+        </svg>
+      </div>
+    </section>
+    <section class="whywe">
+      <div class="wrapper">
+        <h2> Чому варто залишитись саме з ESET? </h2>
+        <div class="adv">
+          <div><span>110+ млн.</span>Користувачів у всьому світі</div>
+          <div><span>102+</span>Престижних нагород VB100</div>
+          <div><span>30+ років</span>Технології NOD32</div>
+          <div><span>13</span>Глобальних дослідницьких центрів</div>
+        </div>
+        <div class="arrow">
+          <svg>
+            <use xlink:href="#arrow-white"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <section class="renew">
+      <div class="wrapper">
+        <h2>Заощаджуй на вартості нової ліцензії при її поновленні!</h2>
+        <p class="renew__sub">Протягом 30 днів <b>до закінчення дії ліцензії</b>, що використовується, або протягом <b>60 днів після</b> закінчення дії ліцензії ти можеш поновити ліцензію на пільгових умовах, тобто <b>отримати знижку 40%</b>.</p>
+      </div>
+    </section>
+    <section class="save wrapper" id="renew">
+      <h2> Поновлюй ліцензію та відчувай себе у безпеці вивчаючи онлайн! </h2>
+    </section>
+    <section class="cards-block" id="cards-block">
+      <div class="container">
+        <input type="radio" id="tab1" name="tab" checked />
+        <label for="tab1">
+          <svg class="">
+            <use xlink:href="#windows"></use>
+          </svg> Windows </label>
+        <input type="radio" id="tab2" name="tab" />
+        <label for="tab2">
+          <svg class="">
+            <use xlink:href="#android"></use>
+          </svg> Android </label>
+        <input type="radio" id="tab3" name="tab" />
+        <label for="tab3">
+          <svg class="">
+            <use xlink:href="#mac-os"></use>
+          </svg> MacOS </label>
+        <input type="radio" id="tab4" name="tab" />
+        <label for="tab4">
+          <svg class="">
+            <use xlink:href="#linux"></use>
+          </svg> Linux </label>
+        <div class="line"></div>
+        <div class="content-container">
+          <div class="content" id="c1">
+            <div class="cards">
+              <div class="card">
+                <div class="card__img">
+                  <img src="images/card.png" />
+                </div>
+                <div class="card__title">title</div>
+                <div class="card__orderform">
+                  <div class="card__numbers">
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="3" name="quantity-d" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="quantity-d">пристрій</legend>
+                    </div>
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="5" name="quantity-p" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="qantity-p">рік</legend>
+                    </div>
+                  </div>
+                  <div class="card__price">1152 <sub>грн</sub></div>
+                  <a href="#" class="btn btn-green btn-renew">Поновити ліцензію</a>
+                </div>
+                <div class="card__second-btn">
+                  <a href="#" class="btn-order">Придбати антивірус</a>
+                </div>
+                <div class="card__description">
+                  <p>description 1</p>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dicta minus illo expedita! </p>
+                </div>
+                <ul class="card__adv">
+                  <li>adv1</li>
+                  <li>adv2</li>
+                  <li>adv3</li>
+                  <li>adv4</li>
+                  <li class="is-inactive">adv5</li>
+                  <li class="is-inactive">adv6</li>
+                </ul>
+              </div>
+              <div class="card">
+                <div class="card__img">
+                  <img src="images/card.png" />
+                </div>
+                <div class="card__title">title</div>
+                <div class="card__orderform">
+                  <div class="card__numbers">
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="3" name="quantity-d" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="quantity-d">пристрій</legend>
+                    </div>
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="5" name="quantity-p" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="qantity-p">рік</legend>
+                    </div>
+                  </div>
+                  <div class="card__price">1152 <sub>грн</sub></div>
+                  <a href="#" class="btn btn-green btn-renew">Поновити ліцензію</a>
+                </div>
+                <div class="card__second-btn">
+                  <a href="#" class="btn-order">Придбати антивірус</a>
+                </div>
+                <div class="card__description">
+                  <p>description 1</p>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dicta minus illo expedita! </p>
+                </div>
+                <ul class="card__adv">
+                  <li>adv1</li>
+                  <li>adv2</li>
+                  <li>adv3</li>
+                  <li>adv4</li>
+                  <li class="is-inactive">adv5</li>
+                  <li class="is-inactive">adv6</li>
+                </ul>
+              </div>
+              <div class="card">
+                <div class="card__img">
+                  <img src="images/card.png" />
+                </div>
+                <div class="card__title">title</div>
+                <div class="card__orderform">
+                  <div class="card__numbers">
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="3" name="quantity-d" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="quantity-d">пристрій</legend>
+                    </div>
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="5" name="quantity-p" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="qantity-p">рік</legend>
+                    </div>
+                  </div>
+                  <div class="card__price">1152 <sub>грн</sub></div>
+                  <a href="#" class="btn btn-green btn-renew">Поновити ліцензію</a>
+                </div>
+                <div class="card__second-btn">
+                  <a href="#" class="btn-order">Придбати антивірус</a>
+                </div>
+                <div class="card__description">
+                  <p>description 1</p>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dicta minus illo expedita! </p>
+                </div>
+                <ul class="card__adv">
+                  <li>adv1</li>
+                  <li>adv2</li>
+                  <li>adv3</li>
+                  <li>adv4</li>
+                  <li class="is-inactive">adv5</li>
+                  <li class="is-inactive">adv6</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="content" id="c2">
+            <div class="cards">
+              <div class="card">
+                <div class="card__img">
+                  <img src="images/card.png" />
+                </div>
+                <div class="card__title">title</div>
+                <div class="card__orderform">
+                  <div class="card__numbers">
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="3" name="quantity-d" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="quantity-d">пристрій</legend>
+                    </div>
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="5" name="quantity-p" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="qantity-p">рік</legend>
+                    </div>
+                  </div>
+                  <div class="card__price">1152 <sub>грн</sub></div>
+                  <a href="#" class="btn btn-green btn-renew">Поновити ліцензію</a>
+                </div>
+                <div class="card__second-btn">
+                  <a href="#" class="btn-order">Придбати антивірус</a>
+                </div>
+                <div class="card__description">
+                  <p>description 1</p>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dicta minus illo expedita! </p>
+                </div>
+                <ul class="card__adv">
+                  <li>adv1</li>
+                  <li>adv2</li>
+                  <li>adv3</li>
+                  <li>adv4</li>
+                  <li class="is-inactive">adv5</li>
+                  <li class="is-inactive">adv6</li>
+                </ul>
+              </div>
+              <div class="card">
+                <div class="card__img">
+                  <img src="images/card.png" />
+                </div>
+                <div class="card__title">title</div>
+                <div class="card__orderform">
+                  <div class="card__numbers">
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="3" name="quantity-d" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="quantity-d">пристрій</legend>
+                    </div>
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="5" name="quantity-p" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="qantity-p">рік</legend>
+                    </div>
+                  </div>
+                  <div class="card__price">1152 <sub>грн</sub></div>
+                  <a href="#" class="btn btn-green btn-renew">Поновити ліцензію</a>
+                </div>
+                <div class="card__second-btn">
+                  <a href="#" class="btn-order">Придбати антивірус</a>
+                </div>
+                <div class="card__description">
+                  <p>description 1</p>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dicta minus illo expedita! </p>
+                </div>
+                <ul class="card__adv">
+                  <li>adv1</li>
+                  <li>adv2</li>
+                  <li>adv3</li>
+                  <li>adv4</li>
+                  <li class="is-inactive">adv5</li>
+                  <li class="is-inactive">adv6</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="content" id="c3">
+            <div class="cards">
+              <div class="card">
+                <div class="card__img">
+                  <img src="images/card.png" />
+                </div>
+                <div class="card__title">title</div>
+                <div class="card__orderform">
+                  <div class="card__numbers">
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="3" name="quantity-d" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="quantity-d">пристрій</legend>
+                    </div>
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="5" name="quantity-p" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="qantity-p">рік</legend>
+                    </div>
+                  </div>
+                  <div class="card__price">1152 <sub>грн</sub></div>
+                  <a href="#" class="btn btn-green btn-renew">Поновити ліцензію</a>
+                </div>
+                <div class="card__second-btn">
+                  <a href="#" class="btn-order">Придбати антивірус</a>
+                </div>
+                <div class="card__description">
+                  <p>description 1</p>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dicta minus illo expedita! </p>
+                </div>
+                <ul class="card__adv">
+                  <li>adv1</li>
+                  <li>adv2</li>
+                  <li>adv3</li>
+                  <li>adv4</li>
+                  <li class="is-inactive">adv5</li>
+                  <li class="is-inactive">adv6</li>
+                </ul>
+              </div>
+              <div class="card">
+                <div class="card__img">
+                  <img src="images/card.png" />
+                </div>
+                <div class="card__title">title</div>
+                <div class="card__orderform">
+                  <div class="card__numbers">
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="3" name="quantity-d" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="quantity-d">пристрій</legend>
+                    </div>
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="5" name="quantity-p" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="qantity-p">рік</legend>
+                    </div>
+                  </div>
+                  <div class="card__price">1152 <sub>грн</sub></div>
+                  <a href="#" class="btn btn-green btn-renew">Поновити ліцензію</a>
+                </div>
+                <div class="card__second-btn">
+                  <a href="#" class="btn-order">Придбати антивірус</a>
+                </div>
+                <div class="card__description">
+                  <p>description 1</p>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dicta minus illo expedita! </p>
+                </div>
+                <ul class="card__adv">
+                  <li>adv1</li>
+                  <li>adv2</li>
+                  <li>adv3</li>
+                  <li>adv4</li>
+                  <li class="is-inactive">adv5</li>
+                  <li class="is-inactive">adv6</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="content" id="c4">
+            <div class="cards">
+              <div class="card">
+                <div class="card__img">
+                  <img src="images/card.png" />
+                </div>
+                <div class="card__title">title</div>
+                <div class="card__orderform">
+                  <div class="card__numbers">
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="3" name="quantity-d" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="quantity-d">пристрій</legend>
+                    </div>
+                    <div class="number-input">
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></button>
+                      <input class="quantity" min="1" max="5" name="quantity-p" value="1" type="number" />
+                      <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      <legend for="qantity-p">рік</legend>
+                    </div>
+                  </div>
+                  <div class="card__price">1152 <sub>грн</sub></div>
+                  <a href="#" class="btn btn-green btn-renew">Поновити ліцензію</a>
+                </div>
+                <div class="card__second-btn">
+                  <a href="#" class="btn-order">Придбати антивірус</a>
+                </div>
+                <div class="card__description">
+                  <p>description 1</p>
+                  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dicta minus illo expedita! </p>
+                </div>
+                <ul class="card__adv">
+                  <li>adv1</li>
+                  <li>adv2</li>
+                  <li>adv3</li>
+                  <li>adv4</li>
+                  <li class="is-inactive">adv5</li>
+                  <li class="is-inactive">adv6</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arrow">
+        <svg class="arrow-blue">
+          <use xlink:href="#arrow-blue"></use>
+        </svg>
+      </div>
+    </section>
+    <section class="legendary wrapper" id="legendary">
+      <div>
+        <h2>Легендарна технологія</h2>
+        <p class="legendary__sub">Якість технології NOD32 підтверджена численними відзнаками за підсумками незалежних тестувань.</p>
+        <div class="awards">
+          <img src="images/im1.png" width="156" height="80" />
+          <img src="images/im2.png" width="153" height="80" />
+          <img src="images/im3.png" width="157" height="80" />
+          <img src="images/im4.png" width="157" height="80" />
+          <img src="images/im5.png" width="69" height="110" />
+          <img src="images/im6.png" width="133" height="80" />
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrapper">
+        <div>
+          <svg class="icon-logo">
+            <use xlink:href="#logo"></use>
+          </svg>
+        </div>
+        <div>
+          <span class="footer__phone">+38 <sup>044 339 57 20</sup></span>
+          <span>пн.-нд., 9:00 - 18:00</span>
+        </div>
+        <div class="footer__mail">
+          <svg class="icon-mail">
+            <use xlink:href="#email"></use>
+          </svg>
+          <a href="mailto:sales@it-mod.com.ua">sales@it-mod.com.ua</a>
+        </div>
+        <div>
+          <div class="footer__mail-mob">
+            <svg class="icon-mail">
+              <use xlink:href="#email"></use>
+            </svg>
+            <a class="" href="mailto:sales@it-mod.com.ua">sales@it-mod.com.ua <br /></a>
+          </div>
+          <svg class="icon-point">
+            <use xlink:href="#point"></use>
+          </svg>
+          <span class="footer__addr">Україна, 03150, м. Київ,<br />вул. Казимира Малевича 86</span>
+        </div>
+      </div>
+    </footer>
+    <div class="b-popup" id="pop-buy">
+      <div class="b-popup-content popup-buy">
+        <div class="b-popup-close">
+          <svg class="icon-close">
+            <use xlink:href="#close"></use>
+          </svg>
+        </div>
+        <h3>Форма замовлення</h3>
+        <form>
+          <label for="bname">Ім’я та Прізвище</label>
+          <input type="text" id="name" name="bname" required />
+          <label for="bemail">Електронна адреса</label>
+          <input type="email" id="email" name="bemail" required />
+          <label for="bphone">Телефон</label>
+          <input type="tel" id="bphone" name="bphone" required />
+          <label for="btitle">Вы обрали</label>
+          <input id="btitle" name="btitle" value="ESET Smart Security Premium" />
+          <input type="submit" value="1152 грн – Сплатити" />
+        </form>
+      </div>
+    </div>
+    <div class="b-popup" id="pop-renew">
+      <div class="b-popup-content popup-renew">
+        <div class="b-popup-close">
+          <svg class="icon-close">
+            <use xlink:href="#close"></use>
+          </svg>
+        </div>
+        <h3>Поновлення ліцензії. Авторизація</h3>
+        <p>Будь ласка, введіть один з параметрів, які використовувались для активації Вашої ліцензії.</p>
+        <div class="acc" id="acc">
+          <div class="acc__title"> Ліцензійний ключ </div>
+          <div class="acc__content">
+            <form>
+              <label for="rkey"> Введіть попередній ключ активації:</label>
+              <input type="text" id="rkey" name="rkey" />
+              <input type="submit" value="Продовжити" />
+            </form>
+          </div>
+          <div class="acc__title"> Електронна пошта</div>
+          <div class="acc__content">
+            <form>
+              <label for="remail"> Введіть адресу електронної пошти, яку Ви вказали під час реєстрації продукту: </label>
+              <input type="email" id="remail" name="remail" />
+              <input type="submit" value="Продовжити" />
+            </form>
+          </div>
+          <div class="acc__title"> Номер телефону </div>
+          <div class="acc__content">
+            <form>
+              <label for="rphone"> Введіть номер телефону, який Ви вказали під час реєстрації продукту: </label>
+              <input type="tel" id="rphone" name="rphone" />
+              <input type="submit" value="Продовжити" />
+            </form>
+          </div>
+          <div class="acc__title"> Ім’я користувача </div>
+          <div class="acc__content">
+            <form>
+              <label for="rname"> Введіть EAV/TRIAL-ім'я, яке Ви отримали після реєстрації продукту: </label>
+              <input type="text" id="rname" name="rname" />
+              <input type="submit" value="Продовжити" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+</html>

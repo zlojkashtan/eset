@@ -1,0 +1,988 @@
+
+//@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+// sm 768
+// md 1024
+// lg 1200
+
+$white: #fff
+$persian-green: #0296A1
+$pelorous: #34ABB3
+$sushi: #8CC63F
+$wild-sand: #F5F5F5
+$alto: #D0D0D0
+
+$not: 4
+$wot: 100%/4
+
++keyframes(bounce)
+    0%, 20%, 50%, 80%, 100%
+        transform: translateY(0)
+    40%
+        transform: translateY(-20px)
+    60%
+        transform: translateY(-10px)
+
+header,
+.banner,
+.safely,
+.whywe,
+.legendary
+    //display: none!important
+
+*
+    //transition: all 0.2s linear
+    &:focus
+        outline: 0
+html
+    font-size: 62.5%
+body
+    position: relative
+    font-family: 'Roboto', sans-serif
+    font-weight: 400
+    color: #222
+    +fs(14)
+    +sm
+        +fs(16)
+.hidden
+	display: none
+.wrapper
+    //border: 1px solid #ff0000
+    width: 100%
+    max-width: 100%
+    margin: 0 auto
+    padding: 0 16px
+    +lg
+        padding: 0
+        max-width: 1200px
+.btn
+    color: $white
+    text-decoration: none
+    +fslh(14,24)
+    +sm
+        +fslh(18,24)
+
+.btn-green
+    display: block
+    background-color: $sushi
+    border-radius: 8px
+    text-align: center
+    padding: 12px 0
+    +sm
+        display: inline-block
+        padding: 20px 0px
+    &:hover
+        background: #7DB138
+.btn-opacity
+    display: block
+    background-color: rgba(255,255,255,0.3)
+    border-radius: 8px
+    text-align: center
+    padding: 12px 0
+    margin-top: 16px
+.btn-dashed
+    border-bottom: 1px dashed
+    display: inline-block
+    padding-bottom: 3px
+    &:hover
+        border-bottom: 0
+
+.arrow
+    padding-top: 20px
+    animation: bounce 2s infinite
+    // text-align: center
+    // margin: 0 auto
+    svg
+        display: block
+        margin: 0 auto
+        width: 24px
+        height: 21px
+        +sm
+            width: 45px
+            height: 40px
+
+h1
+    font-weight: 400
+    +fslh(24,32)
+    +sm
+        +fslh(40,56)
+    +md
+        +fslh(48,64)
+    +lg
+        +fslh(54,72)
+h2
+    +fslh(24,32)
+    +sm
+        +fslh(32,40)
+    +md
+        +fslh(40,48)
+p
+    +fslh(14,20)
+    +sm
+        +fslh(16,24)
+    +md
+        +fslh(24,32)
+
+header
+    color: #fff
+    position: fixed
+    z-index: 999
+    width: 100%
+    padding: 16px 0
+    transition: 0.3s linear
+    &.painted
+        transition: 0.3s linear
+        background-color: $persian-green
+.header
+    display: flex
+    & > div
+        flex: 1 1 0px
+    &__left
+        display: flex
+        +sm
+            display: none
+    &__center,
+    &__right
+        display: flex
+.b-left
+    &__burger
+        margin: auto 0
+        cursor: pointer
+        .icon-burger
+            width: 20px
+            height: 13px
+    &__close
+        margin: auto 0
+        cursor: pointer
+        display: none
+        .icon-close
+            width: 18px
+            height: 18px
+
+.b-center
+    &__logo
+        margin: 0 auto
+        +sm
+            margin: auto 48px auto 0
+        svg
+            fill: $white
+            width: 70px
+            height: 24px
+            +sm
+                width: 93px
+                height: 32px
+            +md
+                width: 139px
+                height: 48px
+
+    &__lang
+        display: none
+        +sm
+            margin: auto 32px auto 0
+            display: block
+        +lg
+            margin: auto 48px auto 0
+    &__phone
+        display: none
+        +fs(14)
+        +md
+            margin: auto 0
+            display: block
+        sup
+            font-weight: 500
+            +fs(24)
+        div:last-child
+            +fs(10)
+
+.lang-button
+    display: inline
+    color: $white
+    text-decoration: none
+    border: 1px solid $white
+    padding: 4px 8px
+    border-radius: 8px
+    +fslh(12,24)
+    &--inactive
+        cursor: pointer
+        opacity: 0.5
+        &:hover
+            color: $persian-green
+            background: $white
+
+.b-right
+    &__phoneicon
+        text-align: center
+        display: block
+        margin: auto 0 auto auto
+        cursor: pointer
+        +sm
+            margin: auto 24px auto auto
+        +md
+            display: none
+        svg
+            width: 20px
+            height: 20px
+    &__subbutton
+        margin: auto 32px auto auto
+        display: none
+        +md
+            display: block
+        a
+            color: $white
+            text-decoration: none
+            border-bottom: 1px dashed $white
+            +fslh(16,24)
+            &:hover
+                border: 0
+    &__button
+        display: none
+        margin: auto 0
+        +sm
+            display: block
+        a
+            color: $white
+            text-decoration: none
+            background-color: $sushi
+            border-radius: 8px
+            text-align: center
+            padding: 8px 38px
+            +fslh(14,32)
+            +md
+                padding: 15px 43px
+                +fslh(16,48)
+            &:hover
+                background: #7DB138
+
+
+.menu
+    padding: 90px 50px 0 50px
+    display: none
+    z-index: 998
+    height: 100vh
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    background-color: $persian-green
+    color: $white
+    span
+        display: block
+    &__lang
+        border-top: 1px solid rgba(255, 255, 255, 0.3)
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+        text-align: center
+        padding: 24px 0
+        margin: 36px auto
+    &__contacts
+        & > div
+            padding-bottom: 26px
+    & .lang-button
+        margin: 0 7px
+        +fslh(14,24)
+    &__email
+        text-decoration: none
+        color: $white
+        &:hover
+            text-decoration: underline
+    &__phone
+        font-weight: 700
+        & sup
+            +fslh(24,24)
+
+section
+    &:after
+    content: " "
+    display: block
+    clear: both
+
+
+.float-button
+    z-index: 997
+    display: none
+    position: fixed
+    width: 100%
+    bottom: 0
+    max-width: 100%
+    padding: 0 16px 16px 16px
+
+.banner
+    background-color: $persian-green
+    color: $white
+    &>div
+        padding-bottom: 20px
+        +sm
+            padding-bottom: 24px
+        +md
+            padding-bottom: 30px
+
+.b-content
+    background-image: url('img/banner-bg-mob.png')
+    background-repeat: no-repeat
+    background-position: top right
+    background-size: contain
+    padding: 250px 0px 24px 0px
+    +sm
+        background-image: url('img/banner-bg.png')
+        background-position: bottom right
+        padding: 152px 0 72px 0
+    +md
+        padding: 238px 0 56px 0
+    +lg
+        padding: 232px 0 155px 0
+    &__main
+        width: 100%
+        max-width: 350px
+        +sm
+            max-width: 550px
+            width: 70%
+        +md
+            max-width: 750px
+        +lg
+            max-width: 850px
+    &__sub
+        padding: 16px 0 24px 0
+        width: 100%
+        +sm
+            padding: 24px 0 48px 0
+            width: 60%
+
+    &__buttons
+        text-align: center
+        +sm
+            text-align: left
+    .btn-green
+        padding: 12px 54px
+    .btn-dashed
+        margin: 16px 0 0 0
+        +sm
+            margin: 0 0 0 72px
+
+
+.steps
+    background-color: $pelorous
+    border-radius: 8px
+    padding: 32px 40px
+    display: flex
+    flex-direction: column
+    +md
+        padding: 30px 20px
+        flex-direction: row
+    & > div
+        display: flex
+        align-items: center
+        flex: 1 1 auto
+        padding: 12px 0px
+        +fslh(14, 16)
+        +sm
+            flex: 1 1 0px
+            +fslh(24, 32)
+        +md
+            padding: 0
+            +fslh(20, 32)
+        +lg
+            padding: 0 10px
+    &__nmbr
+        color: rgba(255,255,255,0.3)
+        font-weight: 900
+        padding-right: 20px
+        +fslh(40,48)
+        +sm
+            +fslh(72,85)
+            padding-right: 10px
+        +lg
+            +fslh(90, 105)
+
+.safely
+    padding-top: 64px
+    padding-bottom: 40px
+    background-image: linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%), url('img/start-bg.png')
+    background-size: 70%
+    background-repeat: no-repeat
+    background-position: 170% 65%
+    +sm
+        background-size: 60% auto
+        background-position: 150% center
+        padding-top: 136px
+        padding-bottom: 50px
+    +md
+        background-image: url('img/start-bg.png')
+        background-size: auto 60%
+        background-position: 110% center
+        padding-top: 120px
+        padding-bottom: 50px
+    +lg
+        background-position: 100% center
+        padding-top: 140px
+        padding-bottom: 50px
+    &__sub
+        width: 100%
+        padding: 16px 0 24px 0
+        +sm
+            width: 70%
+            padding: 32px 0 40px 0
+        +md
+            padding: 40px 0 48px 0
+        +lg
+            padding: 40px 0 56px 0
+
+    &__blocks
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        padding: 0 40px
+        width: 100%
+        +fslh(12,16)
+        +sm
+            width: 70%
+            flex-direction: row
+            padding: 0
+            +fslh(14,16)
+        +md
+            +fslh(16,24)
+        &>div
+            //border: 1px solid green
+            width: 100%
+            padding: 0 0 24px 0
+            +sm
+                width: 50%
+                padding: 0 24px 32px 0
+            +md
+                padding: 0 88px 40px 0
+            +lg
+                padding: 0 72px 56px 0
+            &:last-child
+                padding: 0
+    span
+        font-weight: 900
+        display: block
+        padding: 4px 0 8px 0
+        +fslh(16,32)
+        +sm
+            padding: 24px 0 16px 0
+            +fslh(24,32)
+            +lg
+                padding: 32px 0 16px 0
+    svg
+        height: 48px
+        +sm
+            height: 72px
+        +lg
+            height: 80px
+    .arrow
+        svg
+            transform: rotate(180deg)
+
+.whywe
+    background-color: $persian-green
+    background-image: url('img/whywe-bg-mob.png')
+    background-position: top right
+    background-size: cover
+    background-repeat: no-repeat
+    color: $white
+    padding: 64px 0 30px 0
+    +sm
+        background-image: url('img/whywe-bg.png')
+        padding: 105px 0 40px 0
+    +md
+        background-size: cover
+        padding: 140px 0 40px 0
+.adv
+    display: flex
+    flex-direction: column
+    padding-top: 40px
+    padding-bottom: 0
+    +sm
+        justify-content: space-between
+        flex-direction: row
+        padding-bottom: 40px
+    +md
+        padding-top: 64px
+    & > div
+        flex: 1 1 auto
+        padding: 12px 50px
+        +fslh(12,16)
+        +sm
+            flex: 1 1 1px
+            padding: 0 40px
+            +fslh(14,16)
+        +md
+            padding: 0 30px
+            +fslh(16,24)
+        +lg
+            padding: 0 40px
+        &:nth-child(1)
+            +sm
+                padding-left: 0
+        &:nth-child(4)
+            +sm
+                padding-right: 0
+    span
+        display: block
+        padding-bottom: 10px
+        +fslh(32,32)
+        +sm
+            +fslh(40,40)
+        +md
+            +fslh(42,42)
+        +lg
+            +fslh(48,48)
+.renew
+	background-color: $wild-sand
+	& .wrapper
+		background-image: linear-gradient(0deg, rgba(245,245,245,0.7) 0%, rgba(245,245,245,0.7) 100%), url('img/save-bg.png')
+		background-repeat: no-repeat
+		background-size: auto 100%
+		background-position: right 100px
+		padding-top: 63px
+		padding-bottom: 56px
+		+sm
+			padding-top: 140px
+			padding-bottom: 170px
+			padding-right: 30%
+		+md
+			background-image: url('img/save-bg.png')
+			background-size: 30% auto
+			background-position: bottom right
+	&__sub
+		padding-top: 32px
+.save
+    padding-top: 64px
+    +sm
+        padding-top: 136px
+        h2
+            width: 70%
+    +md
+        padding-top: 120px
+    +lg
+        padding-top: 140px
+
+.legendary
+	background-image: linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%), url('img/awards-bg.png')
+	background-repeat: no-repeat
+	background-position: center 160px
+	background-size: cover
+	padding-top: 30px
+	padding-bottom: 20px
+	+sm
+		background-image: url('img/awards-bg.png')
+		background-position: right bottom
+		background-size: 400px auto
+		padding-top: 88px
+		padding-bottom: 40px
+		padding-right: 380px
+	+md
+		background-size: 470px auto
+		padding-top: 80px
+		padding-bottom: 65px
+		padding-right: 410px
+	+lg
+		background-size: 440px auto
+		padding-top: 80px
+		padding-bottom: 84px
+		padding-right: 400px
+	&__sub
+		padding: 16px 0 130px 0
+		+sm
+			padding: 32px 0
+		+md
+			padding: 40px 0 80px 0
+.awards
+	img
+		opacity: 0.3
+		margin-right: 16px
+		margin: 0 25px 24px 0
+		zoom: 0.7
+		+sm
+			zoom: 1
+		+md
+			margin: 0 41px 40px 0
+
+.footer
+	background-color: $persian-green
+	color: $white
+	padding: 40px 35px 90px 35px
+	+fslh(14,24)
+	+sm
+		padding: 32px 0
+	+md
+		padding: 48px 0
+	&__phone
+		font-weight: 700
+	& sup
+		+fslh(24,24)
+	& a
+		text-decoration: none
+		color: $white
+		&:hover
+			text-decoration: underline
+	span
+		display: block
+	&__mail
+		display: none
+		+md
+			display: block
+	&__mail-mob
+		display: block
+		padding-bottom: 20px
+		padding-top: 0px
+		+md
+			display: none
+	.wrapper
+		display: flex
+		flex-direction: column
+		+sm
+			flex-direction: row
+		& > div
+			flex: 1 1 auto
+			padding-top: 24px
+			+sm
+				flex: 1 1 1px
+				padding-top: 0
+			&:first-child
+				padding-top: 0
+.icon-logo
+    fill: $white
+    width: 139px
+    height: 48px
+    margin: 0 auto
+    display: block
+    +sm
+        margin-left: 0
+        width: 119px
+        height: 35px
+    +md
+        width: 139px
+        height: 48px
+.icon-mail
+    width: 18px
+    height: 14px
+    padding: 0
+    margin-right: 12px
+.icon-point
+    width: 12px
+    height: 18px
+    padding: 0
+    margin-right: 20px
+    margin-bottom: 10px
+    float: left
+
+
+
+.cards-block
+    position: relative
+    width: 100%
+    max-width: 100%
+    margin: 0 auto
+    padding: 0 16px
+    +lg
+        padding: 0
+        max-width: 1100px
+.cards
+    overflow-y: scroll
+    display: flex
+    justify-content: start
+    flex-direction: row
+    +md
+        justify-content: center
+.card
+    flex: 0 0 235px
+    max-width: 235px
+    margin-right: 12px
+    +fslh(12,16)
+    +sm
+        margin-right: 32px
+        flex: 0 0 300px
+        max-width: 300px
+        +fslh(14,24)
+    +md
+        margin-right: 46px
+    +lg
+        margin-right: 100px
+    &:last-child
+        margin-right: 0
+    &__img
+        img
+            width: 100%
+    &__title
+        +fs(16)
+        font-weight: 900
+        padding-top: 24px
+        +sm
+            +fs(24)
+            font-weight: 500
+            padding-top: 32px
+    &__description
+        p
+            padding-top: 16px
+            +sm
+                padding-top: 24px
+    &__orderform
+        padding-top: 26px
+        +sm
+            padding-top: 32px
+        a
+            width: 100%
+    &__numbers
+        display: flex
+        justify-content: space-around
+    &__price
+        text-align: center
+        padding: 16px 0 24px 0
+        +fslh(24,28)
+        +sm
+            padding: 24px 0
+            +fslh(32,38)
+        sub
+            +fslh(12,28)
+            +sm
+                +fslh(14,38)
+    &__second-btn
+        text-align: center
+        margin-top: 16px
+        +sm
+            margin-top: 24px
+        a
+            color: $sushi
+            border-bottom: 1px dashed $sushi
+            text-decoration: none
+            +fslh(14,24)
+            +sm
+                +fslh(16,24)
+            &:hover
+                border: 0
+    &__adv
+        padding: 24px 0 0 0
+        +sm
+            +fs(16)
+            padding: 32px 0
+        li
+            margin: 0 0 0 33px
+            padding: 8px 0
+            list-style-image: url('data:image/svg+xml,%3Csvg height="21" viewBox="0 0 26 21" width="26" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="m26 701.348098-3.2720051-3.348098-13.97970912 14.336054-5.5207478-5.648339-3.22753798 3.359538 8.74927639 8.952747z" fill="%238cc63f" transform="translate(0 -698)"/%3E%3C/svg%3E')
+            &.is-inactive
+                opacity: 0.2
+                list-style-image: none
+
+.container
+    margin-top: 35px
+    position: relative
+    font-size: 0
+    overflow: hidden
+    +sm
+        margin-top: 56px
+    & > input
+        display: none
+        &:checked + label
+            color: $persian-green
+            & svg
+                fill: $persian-green
+        @for $i from 1 through $not
+            &#tab#{$i}:checked
+                ~ .line
+                    left: #{($i - 1) * $wot}
+                ~ .content-container #c#{$i}
+                    opacity: 1
+                    flex: 0 0 100%
+                    width: 100%
+                    & .card
+                        opacity: 1
+                        transform: translateY(0px)
+    label
+        display: inline-block
+        width: $wot
+        text-align: center
+        position: relative
+        transition: 0.25s background ease
+        cursor: pointer
+        +fs(16)
+        +sm
+            +fslh(24)
+        & svg
+            fill: #d5d5d5
+            vertical-align: middle
+            display: none
+            height: 48px
+            width: 41px
+            +sm
+                display: inline-block
+        &:hover
+            transition: all 0.5s
+            color: $persian-green
+            & > svg
+                transition: all 0.5s
+                fill: $persian-green
+    .line
+        position: absolute
+        height: 4px
+        background: $persian-green
+        width: $wot
+        top: 25px
+        left: 0
+        transition: 0.25s ease
+        +sm
+            height: 8px
+            top: 60px
+    .content-container
+        margin-top: 40px
+        display: flex
+        +sm
+            margin-top: 70px
+        .content
+            flex: 1 1 0%
+            width: 0%
+            opacity: 0
+            .card
+                transform: translateY(50%)
+                opacity: 0
+                transition: opacity 0.4s, transform 0.4s
+                @for $x from 1 through 3
+                    &:nth-child(#{$x})
+                        transition-delay: 0.2s + ($x * 0.2s)
+
+
+
+.number-input
+    display: inline-flex
+    flex-wrap: wrap
+    justify-content: space-around
+    legend
+        width: 100%
+        text-align: center
+    button
+        outline:none
+        -webkit-appearance: none
+        border-radius: 50%
+        border: 1px solid $persian-green
+        background: $persian-green
+        align-items: center
+        justify-content: center
+        width: 24px
+        height: 24px
+        cursor: pointer
+        margin: 0
+        position: relative
+        &:before,
+        &:after
+            display: inline-block
+            position: absolute
+            content: ''
+            width: 10px
+            height: 2px
+            background-color: $white
+            transform: translate(-50%, -50%)
+        &:hover
+            background-color: #017880
+        &.plus:after
+            transform: translate(-50%, -50%) rotate(90deg)
+    input[type=number]
+        appearance: textfield
+        width: 60px
+        height: 24px
+        text-align: center
+        +fslh(24, 28)
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button
+            -webkit-appearance: none
+
+.b-popup
+    display: none
+    width: 100%
+    min-height: 100%
+    background-color: rgba(0,0,0,0.7)
+    overflow: hidden
+    position: fixed
+    top: 0px
+    z-index: 999
+    &-content
+        position: relative
+        left: 50%
+        width: 100%
+        height: 100vh
+        transform: translateX(-50%)
+        display: inline-block
+        margin: 0
+        background-color: $white
+        padding: 40px 16px
+        +sm
+            height: auto
+            margin: 40px auto
+            box-shadow: 0px 0px 10px #000
+            border-radius: 8px
+            padding: 56px 64px
+        &.popup-buy
+            +sm
+                width: 500px
+        &.popup-renew
+            +sm
+                width: 600px
+
+    &-close
+        cursor: pointer
+        position: absolute
+        top: 24px
+        right: 24px
+        svg
+            width: 24px
+            height: 24px
+
+    h3
+        font-weight: 400
+        +fslh(24,32)
+    p
+        +fslh(14,24)
+        padding: 32px 0 20px 0
+
+    form
+        padding-top: 24px
+    label
+        color: #A0A0A0
+        +fslh(12,16)
+
+    input
+        appearance: none
+        width: 100%
+        border-radius: 8px
+        +fslh(16, 40)
+
+    input[type=text],
+    input[type=email],
+    input[type=tel]
+        margin: 8px 0 16px 0
+        border: 1px solid $alto
+        padding: 12px
+        +fslh(12,16)
+    input[type=submit]
+        color: $white
+        margin-top: 16px
+        background-color: $sushi
+        padding: 4px
+        text-align: center
+
+.tabs
+    display: flex
+    flex-direction: column
+    & > div
+        border: 1px solid red
+    &__title
+        display: flex
+        justify-content: space-between
+    &__line
+    &__container
+    &__content
+        display: none
+
+.acc
+    &__title
+        width: 100%
+        cursor: pointer
+        padding: 12px 8px
+        border-bottom: 1px solid $alto
+        &:hover
+            color: $persian-green
+        &.is-active
+            color: $persian-green
+            border-bottom: 2px solid $persian-green
+    &__content
+        padding: 0 8px 8px 8px
+        display: none
+        border-bottom: 1px solid $alto
